@@ -65,11 +65,18 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         _players.Item1.name = "RedPlayer";
         _players.Item1.GetComponent<PlayerController>().Init(Color.red, PlayerInput);
+        _players.Item1.GetComponent<DamageableBehaviour>().die.AddListener(GameOver);
         _players.Item2.name = "BluePlayer";
         _players.Item2.GetComponent<PlayerController>().Init(Color.blue, PlayerInput);
+        _players.Item2.GetComponent<DamageableBehaviour>().die.AddListener(GameOver);
     }
 
-    // TODO: Implement player instantiation, gameState management
+    private void GameOver(PlayerController loser)
+    {
+        Debug.Log($"Game over, Loser is: {loser.PlayerColor}.");
+    }
+
+    // TODO: gameState management
     
     // public readonly Dictionary<Color, string> PathToLoadActionMap = new ()
     // {

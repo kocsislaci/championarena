@@ -10,19 +10,6 @@ public class PlayerController : MonoBehaviour
 {
     public Color PlayerColor { get; private set; }
 
-    // private PlayerInput PlayerInput
-    // {
-    //     get
-    //     {
-    //         if (_playerInput == null)
-    //         {
-    //             _playerInput = GetComponent<PlayerInput>();
-    //         }
-    //         return _playerInput;
-    //     }
-    // }
-    // private PlayerInput _playerInput;
-
     private MovableBehaviour MovableBehaviour
     {
         get
@@ -48,19 +35,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     private AttackerBehaviour _attackerBehaviour;
-
-    // private void OnEnable()
-    // {
-    //     if (PlayerInput.actions != null) 
-    //         PlayerInput.actions.Enable();
-    // }
-
-    // private void OnDisable()
-    // {
-    //     if (PlayerInput.actions != null) 
-    //         PlayerInput.actions.Disable();
-    // }
-
+    
     public void Init(Color playerColor, PlayerInput playerInput)
     {
         PlayerColor = playerColor;
@@ -82,9 +57,5 @@ public class PlayerController : MonoBehaviour
         playerInput.actions[colorString + "Movement"].canceled += MovableBehaviour.OnMovement;
         playerInput.actions[colorString + "CombatAction1"].performed += AttackerBehaviour.InvokeCombatAction1;
         playerInput.actions[colorString + "CombatAction2"].performed += AttackerBehaviour.InvokeCombatAction2;
-        // TODO set input callbacks
     }
-    // PlayerInput.actions["CombatAction1"].performed += AttackerBehaviour.InvokeCombatAction1;
-    // PlayerInput.actions["CombatAction2"].performed += AttackerBehaviour.InvokeCombatAction2;
-    // TODO: implement callback behaviour here
 }

@@ -1,12 +1,40 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Interfaces
 {
     public abstract class DamageableBehaviour: MonoBehaviour
     {
-        public int CurrentHealth{ get; set; }
-        public int MaxHealth { get; set; }
+        protected const int MaxHealth = 100;
+        
+        public int CurrentHealth
+        {
+            get => _currentHealth;
+            private set
+            {
+                switch (value)
+                {
+                    case <= 0:
+                        die.Invoke(GetComponent<PlayerController>());
+                        break;
+                    case > MaxHealth:
+                        _currentHealth = MaxHealth;
+                        break;
+                }
+                _currentHealth = value;
+            }
+            
+        }
+        private int _currentHealth;
+        public UnityEvent<PlayerController> die = new ();
+        
+        protected virtual void Awake()
+        {
+            CurrentHealth = MaxHealth;
+            die.AddListener(OnDying);
+        }
 
-        // public void onDamage(float damage);
+        protected abstract void OnDying(PlayerController self);
+        public abstract void OnDamage(DamagerBehaviour damager);
     }
 }
