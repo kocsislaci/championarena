@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
@@ -17,6 +18,19 @@ public class GameManager : SingletonBehaviour<GameManager>
     [Header("Camera")]
     [SerializeField]
     private CameraController cameraController;
+    
+    private PlayerInput PlayerInput
+    {
+        get
+        {
+            if (_playerInput == null)
+            {
+                _playerInput = GetComponent<PlayerInput>();
+            }
+            return _playerInput;
+        }
+    }
+    private PlayerInput _playerInput;
     
     private void OnValidate()
     {
@@ -50,16 +64,16 @@ public class GameManager : SingletonBehaviour<GameManager>
     private void SetUpPlayers()
     {
         _players.Item1.name = "RedPlayer";
-        _players.Item1.GetComponent<PlayerController>().Init(Color.red);
+        _players.Item1.GetComponent<PlayerController>().Init(Color.red, PlayerInput);
         _players.Item2.name = "BluePlayer";
-        _players.Item2.GetComponent<PlayerController>().Init(Color.blue);
+        _players.Item2.GetComponent<PlayerController>().Init(Color.blue, PlayerInput);
     }
 
     // TODO: Implement player instantiation, gameState management
     
-    public readonly Dictionary<Color, string> PathToLoadActionMap = new ()
-    {
-        { Color.red, "Controls/PlayerInputActionsMap" },
-        { Color.blue, "Controls/PlayerInputActionsMap" },
-    };
+    // public readonly Dictionary<Color, string> PathToLoadActionMap = new ()
+    // {
+    //     { Color.red, "Controls/PlayerInputActionsMap" },
+    //     { Color.blue, "Controls/PlayerInputActionsMap" },
+    // };
 }

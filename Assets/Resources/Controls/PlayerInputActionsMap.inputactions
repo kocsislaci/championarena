@@ -6,7 +6,7 @@
             "id": "8da46f6a-11d7-44b0-ba9d-e21083ba3b86",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "RedMovement",
                     "type": "Value",
                     "id": "de39e6c5-b3ac-48a8-8275-59e9a40c4b40",
                     "expectedControlType": "Vector2",
@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "CombatAction1",
+                    "name": "RedCombatAction1",
                     "type": "Button",
                     "id": "55f136be-e4fb-46cc-a8bd-d6d56db61c56",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "CombatAction2",
+                    "name": "RedCombatAction2",
                     "type": "Button",
                     "id": "17e1e6f1-657e-4ed8-b325-eba3fd1329a8",
                     "expectedControlType": "Button",
@@ -33,9 +33,45 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "RedPause",
                     "type": "Button",
                     "id": "50268e13-cdba-4ff0-8377-ae9c18030c6b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlueMovement",
+                    "type": "Value",
+                    "id": "4d5c2383-1988-4e37-9956-7d54ce79e7dc",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "BlueCombatAction1",
+                    "type": "Button",
+                    "id": "1ae2980b-f8d0-4ff5-a102-6ca9c3c141ae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlueCombatAction2",
+                    "type": "Button",
+                    "id": "497bf5d7-661c-49e3-bf96-287210a7e1a1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BluePause",
+                    "type": "Button",
+                    "id": "5e22e20d-489a-473b-902b-1afb206b28c0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -49,30 +85,8 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "CombatAction1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e1eba7e8-bba0-4b34-bc50-a6e607ecc8bd",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "CombatAction1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0bf67f76-f8e0-4625-a3ad-648e354c47e3",
-                    "path": "<Keyboard>/u",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "CombatAction1",
+                    "groups": "New control scheme;Keyboard",
+                    "action": "RedCombatAction1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -82,30 +96,8 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "CombatAction2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6842eb99-f19f-476e-b5cc-449846dbc747",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "CombatAction2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "aeb2f8f6-0e81-4d2d-bce5-b1b4eab752cd",
-                    "path": "<Keyboard>/o",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "CombatAction2",
+                    "groups": "New control scheme;Keyboard",
+                    "action": "RedCombatAction2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -116,7 +108,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "RedMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -126,8 +118,8 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Movement",
+                    "groups": "New control scheme;Keyboard",
+                    "action": "RedMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -137,8 +129,8 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Movement",
+                    "groups": "New control scheme;Keyboard",
+                    "action": "RedMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -148,8 +140,8 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Movement",
+                    "groups": "New control scheme;Keyboard",
+                    "action": "RedMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -159,118 +151,8 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "b840cbde-5ab8-4852-8465-795f727a186c",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "a60726b9-d7c9-4961-a452-1374d26f2d9e",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "bab9a181-22f6-4e17-b8b8-5e5137e0e109",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "e3818c35-d4dc-4eb3-896f-d53b006674af",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "a814978b-28f8-4aa5-8916-5c79de2e7e4b",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "3997340e-e335-4a8e-b177-36c1b4492850",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "e23cc7a4-5f9e-457d-8779-df5cdac11d6a",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "f2f01ba3-12b8-4974-a884-25a340f4eecc",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "edb2ec55-f852-483b-8810-7539abad4d1b",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "08d26815-0bb0-404e-80e5-6fb912f7a4f5",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "Movement",
+                    "groups": "New control scheme;Keyboard",
+                    "action": "RedMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -280,19 +162,96 @@
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "RedKeyboard",
-                    "action": "Pause",
+                    "groups": "Keyboard",
+                    "action": "RedPause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "c9c8b6e3-4f83-46dc-993f-2192343d98a4",
+                    "id": "4ec1e0df-8858-4c7c-923e-c52ac0079f83",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BlueCombatAction1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "d5b080f8-3299-4ce1-a014-fab7df4b004b",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlueMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "f9505bc5-916f-4ed5-b408-6b03e55c9c3b",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BlueMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "ccd9b632-0441-4432-8ebe-fcb1e877810d",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BlueMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "8a4c09c8-f8e9-46f1-afbf-a5f59c73e814",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BlueMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "63009b63-083e-494d-8d34-2cee5618f673",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BlueMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c7764a78-ee44-48bd-9a1c-059f549787b4",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "BlueCombatAction2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2953b4ab-884b-4821-8219-76f58bc05859",
                     "path": "<Keyboard>/m",
                     "interactions": "",
                     "processors": "",
-                    "groups": "BlueKeyboard",
-                    "action": "Pause",
+                    "groups": "Keyboard",
+                    "action": "BluePause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -301,19 +260,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "RedKeyboard",
-            "bindingGroup": "RedKeyboard",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "BlueKeyboard",
-            "bindingGroup": "BlueKeyboard",
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
