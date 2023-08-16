@@ -7,7 +7,7 @@ namespace Interfaces
     {
         protected Vector2 CurrentMovement;
         
-        public virtual void OnMove(InputAction.CallbackContext context)
+        public virtual void OnMovement(InputAction.CallbackContext context)
         {
             CurrentMovement = context.ReadValue<Vector2>();
         }

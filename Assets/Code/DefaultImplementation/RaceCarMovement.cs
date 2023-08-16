@@ -9,13 +9,13 @@ namespace DefaultImplementation
         // TODO: Introduce fine tuning variables
         [SerializeField]
         private float speed = 10;
-        private float moving;
-        private float turning;
-        private Rigidbody rigidbody;
+        private float _moving;
+        private float _turning;
+        private Rigidbody _rigidbody;
 
-        private void Start()
+        private void Awake()
         {
-            rigidbody = GetComponentInParent<Rigidbody>();
+            _rigidbody = GetComponentInParent<Rigidbody>();
         }
         
         private void Update()
@@ -23,20 +23,20 @@ namespace DefaultImplementation
             Moving();
         }
 
-        public override void OnMove(InputAction.CallbackContext context)
+        public override void OnMovement(InputAction.CallbackContext context)
         {
-            base.OnMove(context);
-            moving = CurrentMovement.y;
-            turning = CurrentMovement.x;        
+            base.OnMovement(context);
+            _moving = CurrentMovement.y;
+            _turning = CurrentMovement.x;        
         }
         
         private void Moving()
         {
-            float velocity = moving * speed;
+            float velocity = _moving * speed;
             Vector3 facing = transform.forward;
             facing.Scale(new Vector3(velocity, velocity, velocity));
-            rigidbody.velocity = facing;
-            rigidbody.angularVelocity = new Vector3(0, turning * speed, 0);    
+            _rigidbody.velocity = facing;
+            _rigidbody.angularVelocity = new Vector3(0, _turning * speed, 0);    
         }
     }
 }

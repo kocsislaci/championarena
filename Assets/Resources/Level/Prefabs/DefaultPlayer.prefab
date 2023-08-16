@@ -91,8 +91,9 @@ GameObject:
   - component: {fileID: 5989809871238793428}
   - component: {fileID: 7650960642736606588}
   - component: {fileID: 6313592712158168721}
+  - component: {fileID: 1774754208456496027}
   m_Layer: 0
-  m_Name: Player
+  m_Name: DefaultPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,63 +159,23 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 172f8a9c-36f1-4fa1-ac65-579e1a86ef5a
-    m_ActionName: RedPlayer/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+    m_ActionId: de39e6c5-b3ac-48a8-8275-59e9a40c4b40
+    m_ActionName: Red Player Controls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: dbfff2f1-d95e-4b64-b094-f6f5132129b7
-    m_ActionName: RedPlayer/CombatAction1[/Keyboard/q]
+    m_ActionId: 55f136be-e4fb-46cc-a8bd-d6d56db61c56
+    m_ActionName: Red Player Controls/Combat Action 1[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: ddca04fe-1ed3-491a-8e4b-61c63991565d
-    m_ActionName: RedPlayer/CombatAction2[/Keyboard/e]
+    m_ActionId: 17e1e6f1-657e-4ed8-b325-eba3fd1329a8
+    m_ActionName: Red Player Controls/Combat Action 2[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 62957910-5ae6-4e2a-af90-091b110e6445
-    m_ActionName: BluePlayer/Move[/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 23dfc721-3964-402d-b4b7-472f5865d6bd
-    m_ActionName: BluePlayer/CombatAction1[/Keyboard/u]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cf5e761b-1bed-449a-b1d5-aabeedc860c6
-    m_ActionName: BluePlayer/CombatAction2[/Keyboard/o]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1c21c5b4-d2a6-42c5-ab89-19ea8e4e2334
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 68533cde-8c44-47b3-9902-535b02d16c95
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ef82ff0f-2bbc-405b-b633-7a3ae0585278
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cb0eb1e6-01e9-4713-a698-20f4268478b1
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6c7110b0-6f9f-4e75-8e2b-062c3c93e65e
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 328db186-61fb-4564-aec2-08f483f3c501
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f409ca61-afda-41b2-ab1a-1c11ac608593
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b6a326eb-7b37-4a01-a278-1690f4959883
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  m_NeverAutoSwitchControlSchemes: 0
+    m_ActionId: 50268e13-cdba-4ff0-8377-ae9c18030c6b
+    m_ActionName: Red Player Controls/Pause[/Keyboard/x]
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: RedPlayer
+  m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &7650960642736606588
@@ -242,6 +203,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &1774754208456496027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731261557427222276}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c6f78230fa4964a222622d8aae332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+  m_PlayerRoot: {fileID: 0}
 --- !u!1 &7130335652403532838
 GameObject:
   m_ObjectHideFlags: 0

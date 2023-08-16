@@ -1,10 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Interfaces
 {
     public abstract class AttackerBehaviour: MonoBehaviour
     {
-        public abstract void InvokeCombatAction1();
-        public abstract void InvokeCombatAction2();
+        // TODO cooldown
+        // TODO cooldown counter coroutines
+
+
+        public abstract void InvokeCombatAction1(InputAction.CallbackContext context);
+
+        public abstract void InvokeCombatAction2(InputAction.CallbackContext context);
     }
 }
