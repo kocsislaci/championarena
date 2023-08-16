@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Transform _rigTransform;
-    private Transform _cameraTransform;
+    [SerializeField] private Transform _rigTransform;
+    [SerializeField] private Transform _cameraTransform;
     private Tuple<GameObject, GameObject> _followTargets;
     
     private void Awake()
     {
-        _rigTransform = GetComponent<Transform>();
-        _cameraTransform = GetComponentInChildren<Transform>();
+        // _rigTransform.position = Vector3.zero;
+        // _cameraTransform.position = new Vector3(-30, 30, 0);
+        // _cameraTransform.LookAt(_rigTransform);
     }
 
     private void Update()
@@ -35,10 +36,10 @@ public class CameraController : MonoBehaviour
     {
         _rigTransform.position = (_followTargets.Item1.transform.position + _followTargets.Item2.transform.position) / 2;
     }
-
+    
     private void SetCameraHeight()
     {
         float distance = (_followTargets.Item1.transform.position - _followTargets.Item2.transform.position).magnitude;
-        _cameraTransform.position = new Vector3(0, distance * Mathf.Sqrt(2) / 6, 0);
+        _cameraTransform.position = new Vector3(_rigTransform.position.x, distance * Mathf.Sqrt(2), _rigTransform.position.z);
     }
 }

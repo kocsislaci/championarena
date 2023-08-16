@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 // [RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(DamageableBehaviour))]
 [RequireComponent(typeof(MovableBehaviour))]
 [RequireComponent(typeof(AttackerBehaviour))]
 public class PlayerController : MonoBehaviour

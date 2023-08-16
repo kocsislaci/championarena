@@ -5,13 +5,14 @@ namespace Interfaces
 {
     public abstract class DamageableBehaviour: MonoBehaviour
     {
-        protected const int MaxHealth = 100;
+        protected const float MaxHealth = 100;
         
-        public int CurrentHealth
+        public float CurrentHealth
         {
             get => _currentHealth;
-            private set
+            protected set
             {
+                
                 switch (value)
                 {
                     case <= 0:
@@ -21,11 +22,11 @@ namespace Interfaces
                         _currentHealth = MaxHealth;
                         break;
                 }
+                Debug.Log($"Health: {value}");
                 _currentHealth = value;
             }
-            
         }
-        private int _currentHealth;
+        [SerializeField] private float _currentHealth;
         public UnityEvent<PlayerController> die = new ();
         
         protected virtual void Awake()
@@ -35,6 +36,6 @@ namespace Interfaces
         }
 
         protected abstract void OnDying(PlayerController self);
-        public abstract void OnDamage(DamagerBehaviour damager);
+        public abstract void OnDamage(float damage);
     }
 }
